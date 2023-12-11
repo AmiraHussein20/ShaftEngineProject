@@ -3,8 +3,6 @@
   "testDataName": "Amira",
   "testDataMail": "amira.hisham",
 
-  "testDataExpectedUserInfoText": "ENTER ACCOUNT INFORMATION",
-
   "testDataPass": "pass123",
   "testDataDay": "1",
   "testDataMonth": "2",

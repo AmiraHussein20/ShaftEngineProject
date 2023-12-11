@@ -25,10 +25,14 @@ public class userInfoPage {
     private final By enterZipCode = By.id("zipcode");
     private final By mobileNumber = By.id("mobile_number");
     private final By createAccountText = By.xpath("//button[@data-qa=\"create-account\"]");
+    private final By checkCreateAccountText = By.xpath("//h2[@data-qa=\"account-created\"]");
+
     public userInfoPage(SHAFT.GUI.WebDriver driver) {
         this.driver = driver;
     }
-
+    public void assertAccountCreated(String expectedData) {
+        driver.element().assertThat(checkCreateAccountText).text().isEqualTo(expectedData).perform();
+    }
     public void enterAccountInfo(String password, String day, String month, String year){
         driver.element().click(enterGender);
         driver.element().type(enterPassword,password);

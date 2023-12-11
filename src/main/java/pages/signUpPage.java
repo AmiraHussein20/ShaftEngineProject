@@ -15,6 +15,9 @@ public class signUpPage {
     public signUpPage(SHAFT.GUI.WebDriver driver) {
         this.driver = driver;
     }
+    public void assertOnSignUpText(String expectedResult) {
+        driver.element().assertThat(signUpText).text().isEqualTo(expectedResult).perform();
+    }
 
     public void enterInfoOFSignUpPage(String name, String email){
         driver.element().type(enterName,name);
